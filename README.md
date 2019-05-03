@@ -1,10 +1,7 @@
-# STATIC
+# My Website
 
-**This directory is not required, you can delete it if you don't want to use it.**
+I originally generated this with Nuxt as an experiment, but that was overkill for this. Then I attended Lemon's Minnebar 2019 presentation on shrinking your website and ______'s RailsConf 2019 presentation on PWAs and decided to make this splash page as tiny as possible.
 
-This directory contains your static files.
-Each file inside this directory is mapped to `/`.
+Also I paid @_______ for a cute sketch of me to use as an avatar/on my cards/on this site instead of the weird headshot I had before.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
+Color scheme, as always, putzed around with with Coolors.com. Perhaps after I secure some chibi assets.
