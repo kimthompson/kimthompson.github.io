@@ -1,5 +1,27 @@
 {
+  "name": "kimthompson.me",
+  "description": "I love that GitHub still hosts for free <3",
+  "author": "Kim Thompson",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --public-url ./ --out-dir docs"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "parcel": "^1.12.3",
     "pug": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimthompson/drag-race-fantasy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kimthompson/drag-race-fantasy/issues"
   }
 }

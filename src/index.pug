@@ -8,53 +8,7 @@ head
   link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400,400i,700|Rock+Salt|Lato')
   script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
 body
-  header
-    .siteName
-      a(href='/')
-        h1 Kim Thompson
-    nav
-      a(href='#about')
-        .navlink
-          span About
-      a(href='#skills')
-        .navlink
-          span Skills
-      a(href='https://medium.com/kim-thompson')
-        .navlink
-          span Blog
-  section(id='about', class='about')
-    .about_right
-      img(class='headshot-cutout', src='../images/headshot.png', srcset='../images/headshot.png 721w, ../images/headshot@2x.png 1442w', alt='I should probably pay for a professional headshot someday, but for now, I thank the Beauty Lab\'s photography lamps.')
-      img(class='headshot-square', src='../images/headshot_square.jpg', alt='I should probably pay for a professional headshot someday, but for now, I thank the Beauty Lab\'s photography lamps.')
-      .livejournal
-        table
-          tr(class='livejournal_data')
-            td(class='livejournal_label') currently reading
-            td(class='livejournal_attr') The Handmaid's Tale
-          tr(class='livejournal_data')
-            td(class='livejournal_label') currently playing
-            td(class='livejournal_attr') Final Fantasy X
-          tr(class='livejournal_data')
-            td(class='livejournal_label') currently watching
-            td(class='livejournal_attr') RuPaul's Drag Race
-          tr(class='livejournal_data')
-            td(class='livejournal_label') currently playing (mmo edition)
-            td(class='livejournal_attr') Final Fantasy XIV
-          tr(class='livejournal_data')
-            td(class='livejournal_label') currently watching (anime edition)
-            td(class='livejournal_attr') Love Is War
-    .about_left
-      h2 About Me
-      aside I’m a software developer who has been living and working in the Twin Cities since I graduated from the University of Minnesota in 2015. I'm a generalist with experience making applications for web, Windows and iOS. I currently make web apps for Minnesota Public Radio. I hope to post my side projects here, and I hope to actually start blogging.
-  section(id='skills', class='skills')
-    .skills_header
-      h2 Skills
-      button(click='forceRerender') Reset
-      .skills_cards Insert cards here
-  footer
-    .icon_buttons
-      a(class='btn_icon btn_icon-github', href='https://github.com/kimthompson') GitHub
-      a(class='btn_icon btn_icon-medium', href='https://medium.com/kim-thompson') Medium
-      a(class='btn_icon btn_icon-codepen', href='https://codepen.io/KimicalBurn/#') Codepen
-      a(class='btn_icon btn_icon-twitter', href='https://twitter.com/byKimThompson') Twitter
-    a(href='../Feb2019.pdf', class='btn_resume') Resume
+  include _header.pug
+  include _about.pug
+  include _skills.pug
+  include _footer.pug
