@@ -15,7 +15,8 @@
   "dependencies": {},
   "devDependencies": {
     "parcel": "^1.12.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5"
   },
   "repository": {
     "type": "git",

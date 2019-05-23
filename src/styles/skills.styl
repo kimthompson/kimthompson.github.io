@@ -1,0 +1,85 @@
+.skills 
+  background-color: mako
+  color: gallery
+  min-height: 600px
+
+.skills_header 
+  display: flex
+  justify-content: space-between
+  margin: 0 1em
+
+.skills_container 
+  display: flex
+
+.skillCard 
+  width: 17em
+  height: 25em
+  background-color: gallery
+  color: cod-gray
+  border-radius: 1em
+  padding: 1em
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: 3.5em auto 3.5em
+  align-items: center
+  box-shadow: box-shadow-2
+  border-radius: 15px
+  justify-content: center
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  margin-top: 30px
+  position: absolute
+
+.skillCard_rank 
+  font-size: 2rem
+
+.skillCard_title 
+  font-size: 1.8rem
+
+.skillCard_icon 
+  grid-column: 1
+  grid-row: 2
+  width: 17em
+  height: 17em
+  fill-opacity: 0.4
+
+.skillCard_story 
+  grid-column: 1
+  grid-row: 2
+  color: cod-gray
+  font-size: 2rem
+  line-height: 2.2rem
+  text-align: center
+
+.skillCard_top 
+  display: flex
+  align-items: start
+  justify-content: space-between
+  grid-row: 1
+
+.skillCard_bottom 
+  display: flex
+  align-items: end
+  justify-content: space-between
+  grid-row: 3
+
+@media (max-width: tablet) 
+  .skills 
+    min-height: 500px
+
+  .skillCard 
+    width: 15em
+    height: 20em
+    grid-template-rows: 1.5em auto 1.5em
+    padding: 1.5em
+
+  .skillCard_rank 
+    font-size: 1.8rem
+
+  .skillCard_title 
+    font-size: 1.6rem
+
+  .skillCard_story 
+    font-size: 1.4rem
