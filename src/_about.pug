@@ -1,23 +1,8 @@
 section(id='about', class='about')
-  .about_right
-    img(class='icon', src='../images/kim_icon_500x500.png', srcset='../images/kim_icon_250x250.png 721w, ../images/kim_icon_500x500.png 1442w', alt='Art by @lady_red_art on Instagram')
-    .livejournal
-      table
-        tr(class='livejournal_data')
-          td(class='livejournal_label') currently reading
-          td(class='livejournal_attr') The Handmaid's Tale
-        tr(class='livejournal_data')
-          td(class='livejournal_label') currently playing
-          td(class='livejournal_attr') Final Fantasy X
-        tr(class='livejournal_data')
-          td(class='livejournal_label') currently watching
-          td(class='livejournal_attr') RuPaul's Drag Race
-        tr(class='livejournal_data')
-          td(class='livejournal_label') currently playing (mmo edition)
-          td(class='livejournal_attr') Final Fantasy XIV
-        tr(class='livejournal_data')
-          td(class='livejournal_label') currently watching (anime edition)
-          td(class='livejournal_attr') Love Is War
-  .about_left
-    h2 About Me
-    aside I’m a software developer who has been living and working in the Twin Cities since I graduated from the University of Minnesota in 2015. I'm a generalist with experience making applications for web, Windows and iOS. I currently make web apps for Minnesota Public Radio. I hope to post my side projects here, and I hope to actually start blogging.
+  img(class='icon', src='../images/kim_icon_500x500.png', alt='Art by @lady_red_art on Instagram')
+  .livejournal
+    svg(class="livejournal_background", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 1000 525")
+      polygon(stroke="0", class="livejournal_background-rect", points="0 50 1000 150 1000 525 0 475")
+    table(id="livejournal")
+  h2(class="about_desc") About Me
+  aside I’m a software developer who has been living and working in the Twin Cities since I graduated from the University of Minnesota in 2015. I'm a generalist with experience making applications for web, Windows and iOS. I currently make web apps for Minnesota Public Radio. This is a place for blog posts and side projects!

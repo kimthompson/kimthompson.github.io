@@ -1,21 +1,21 @@
 header
   .header
     a(href="/")
-      h1 Kim Thompson
-    button(id="menuToggle")
+      h1(class="header_title") Kim Thompson
+    button(class="menuButton", id="menuToggle")
       i(class="fa fa-caret-down")
   .menu
-    nav(class="navlinks hide", id="menu")
-      ul
-        li
-          a(class="navlinks_link", href='#about')
+    nav
+      ul(id="menu", class="navlinks hide")
+        li(class="navlinks_link")
+          a(href='#about')
             i(class="fa fa-info")
             span About
-        li
-          a(class="navlinks_link", href='#skills')
+        li(class="navlinks_link")
+          a(href='#skills')
             i(class="fa fa-code")
             span Skills
-        li
-          a(class="navlinks_link", href='https://medium.com/kim-thompson')
+        li(class="navlinks_link")
+          a(href='https://medium.com/kim-thompson')
             i(class="fa fa-rss")
             span Blog

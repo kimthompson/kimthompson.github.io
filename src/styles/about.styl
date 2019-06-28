@@ -1,0 +1,41 @@
+.about
+  display: flex
+  flex-direction: column
+  align-items: center
+  img 
+    width: 90%
+    max-width: 500px
+    max-height: 500px
+    margin-bottom: -75px
+    z-index: headshotZIndex
+
+.about_desc
+  margin-top: 75px
+
+.livejournal
+  position: relative
+  font-size: 1.3rem
+  table
+    margin-top: 50px
+    transform: rotate(2.5deg)
+    @media(max-width: 400px) {
+      transform: rotate(0deg)
+      background-color: razzmatazz
+  }
+  td
+    padding: 3px
+  h2
+    margin-top: 10px
+
+.livejournal_background
+  position: absolute
+  z-index: livejournalZIndex
+  @media(max-width: 400px) {
+    display: none
+  }
+
+.livejournal_background-rect
+  fill: razzmatazz
+
+.livejournal_attr
+  font-weight: 600

@@ -1,32 +1,70 @@
-header
-  position: relative
-
 .header
   display: flex
   justify-content: space-between
   align-items: center
-  flex-wrap: wrap
-  margin: 15px
+  margin: 0 15px
+
+.header_title
+  font-size: 10vw
+  @media screen and (min-width: 900px)
+    font-size: 7rem;
+
+.header_title:hover
+  color: maroonFlush 
+  transition: all 200ms linear
 
 .menu
   display: flex
   justify-content: flex-end
-  @media(max-width: 450px)
-    justify-content: flex-start
 
 .menuButton
   margin: 0
+  .fa-caret-down
+    color: razzmatazz
+    font-size: 3rem
+  .fa-caret-down:hover
+    color: maroonFlush
 
 .navlinks
-  margin: 15px
+  margin: 0 15px 0 30px
 
 .navlinks_link
-  color: razzmatazz
-  i
-    width: 50px
-    font-size: 2rem
-  span
-    font-size: 2rem
+  line-height: 2.5rem
+  a
+    color: pastelGray
+    i
+      width: 50px
+      font-size: 2rem
+    span
+      font-size: 2rem
+  a:hover
+    color: vWhite
+    transition: all 200ms linear
 
-.navlinks_link:hover
-  color: maroonFlush
+.navlinks li
+  transition: opacity 200ms linear
+
+.navlinks.hide li
+  opacity: 0
+
+.navlinks.hide li:nth-child(3)
+  transition-delay: 0
+
+.navlinks.hide li:nth-child(2)
+  transition-delay: 100ms
+
+.navlinks.hide li:nth-child(1)
+  transition-delay: 200ms
+
+.navlinks.show li
+  opacity: 1
+
+.navlinks.show li:nth-child(1)
+  transition-delay: 0
+
+.navlinks.show li:nth-child(2)
+  transition-delay: 100ms
+
+.navlinks.show li:nth-child(3)
+  transition-delay: 200ms
+
