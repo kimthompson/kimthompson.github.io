@@ -5,11 +5,16 @@ head
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible', content='ie=edge')
-  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400,400i,700|Rock+Salt|Lato')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Fira+Sans:200,400,400i,600&display=swap')
   link(rel='stylesheet', href='styles/index.styl')
-  script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css')
 body
-  include _header.pug
-  include _about.pug
-  include _skills.pug
-  include _footer.pug
+  <svg class="background" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <polygon stroke="0" class="background_tri-top" points="0 0 1000 0 1000 500 500 750 0 500"></polygon>
+  </svg>
+  .body 
+    include _header.pug
+    include _about.pug
+    include _skills.pug
+    include _footer.pug
+script(src="scripts/eventListeners.js")

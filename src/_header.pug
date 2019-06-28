@@ -1,17 +1,21 @@
 header
-  .siteName
-    a(href='/')
+  .header
+    a(href="/")
       h1 Kim Thompson
-  nav
-    a(href='#about')
-      .navlink
-        //- i.fa.fa-info(aria-hidden='true')
-        span About
-    a(href='#skills')
-      .navlink
-        //- i.fa.fa-code(aria-hidden='true')
-        span Skills
-    a(href='https://medium.com/kim-thompson')
-      .navlink
-        //- i.fa.fa-rss(aria-hidden='true')
-        span Blog
+    button(id="menuToggle")
+      i(class="fa fa-caret-down")
+  .menu
+    nav(class="navlinks hide", id="menu")
+      ul
+        li
+          a(class="navlinks_link", href='#about')
+            i(class="fa fa-info")
+            span About
+        li
+          a(class="navlinks_link", href='#skills')
+            i(class="fa fa-code")
+            span Skills
+        li
+          a(class="navlinks_link", href='https://medium.com/kim-thompson')
+            i(class="fa fa-rss")
+            span Blog

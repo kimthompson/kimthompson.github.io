@@ -10,12 +10,15 @@
   },
   "scripts": {
     "start": "parcel src/index.pug",
-    "build": "parcel build src/index.pug --public-url ./ --out-dir docs"
+    "dev": "parcel watch src/index.pug",
+    "build": "parcel build src/index.pug --public-url ./ --out-dir docs",
+    "clean": "rm -r dist; rm -r .cache; rm -r node_modules; npm cache verify"
   },
   "dependencies": {},
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "parcel": "^1.12.3",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "stylus": "^0.54.5"
   },
   "repository": {
