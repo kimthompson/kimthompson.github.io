@@ -10,32 +10,13 @@
     z-index: headshotZIndex
 
 .about_desc
-  margin-top: 75px
-
-.livejournal
-  position: relative
-  font-size: 1.3rem
-  table
-    margin-top: 50px
-    transform: rotate(2.5deg)
-    @media(max-width: 400px) {
-      transform: rotate(0deg)
-      background-color: razzmatazz
-  }
-  td
-    padding: 3px
+  max-width: 950px
+  margin: 20px
+  text-align: center;
+  @media(min-width: 400px)
+    margin-top: 75px
   h2
-    margin-top: 10px
-
-.livejournal_background
-  position: absolute
-  z-index: livejournalZIndex
-  @media(max-width: 400px) {
-    display: none
-  }
-
-.livejournal_background-rect
-  fill: razzmatazz
-
-.livejournal_attr
-  font-weight: 600
+    color: gunmetal
+  p
+    margin-top: 15px
+    font-size: 2.2rem
