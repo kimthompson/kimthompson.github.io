@@ -2,22 +2,5 @@ section(id='skills', class='skills')
   .skills_header
     h2 Skills
     button(click='forceRerender') Reset
-  .skills_cards
-    .skills_card
-      .skills_card-top
-        .skill_level 10
-        .skill_name HTML
-      i(class="fa fa-html5", style="color: #e34f26; opacity: 0.25")
-      p(class="skills_card-desc") Writing markup that is accessible to humans and parsers is still incredibly important. I try to impress upon newer devs the importance of writing good markup that doesn't get in the way later.
-      .skills_card-bottom
-        .skill_name HTML
-        .skill_level 10
-    .skills_card
-      .skills_card-top
-        .skill_level 10
-        .skill_name CSS
-      i(class="fa fa-css3", style="color: #0645ad; opacity: 0.25")
-      p(class="skills_card-desc") A specialty of mine. Especially since flexbox and grid came out, it's been a dream to work with. Doubly so for when I'm working with SCSS or Stylus and have variables and mixins at my disposal.
-      .skills_card-bottom
-        .skill_name CSS
-        .skill_level 10
+  div(id="skills_cards", class="skills_cards")
+    

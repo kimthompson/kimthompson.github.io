@@ -1,4 +1,4 @@
-export const livejournal = [
+const livejournal = [
   { category: "currently reading", name: "The New Jim Crow" },
   { category: "currently playing", name: "Persona Q2" },
   { category: "currently watching", name: "Chernobyl" },
