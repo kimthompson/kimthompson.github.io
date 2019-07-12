@@ -85,7 +85,7 @@ const skills = [
     level: 5,
     icon: "fas fa-gem",
     story:
-      "Learned this for my current job at MPR. Everything there runs on Rails, and I had a lot of fun running through exercism.io exercises and learning about all the little tricks and conveniences it has that JavaScript doesn't (yet).",
+      "Learned this for my current job at MPR. Everything there runs on Rails, and I had a lot of fun running through exercism.io exercises and learning about all the little tricks and conveniences it has.",
     color: "#cc342d",
     index: 9
   },
@@ -127,9 +127,9 @@ const skills = [
   }
 ];
 
-console.log(skills);
-
 let skillCards = document.getElementById("skills_cards");
+
+skills.sort((a, b) => b.index - a.index);
 
 skills.map(skill => {
   let skillCard = document.createElement("div");
@@ -169,6 +169,7 @@ skills.map(skill => {
 
   let skillIcon = document.createElement("i");
   skillIcon.setAttribute("class", skill.icon);
+  skillIcon.classList.add("skills_card-icon");
   skillIcon.setAttribute("style", `color: ${skill.color}`);
 
   let skillDesc = document.createElement("p");

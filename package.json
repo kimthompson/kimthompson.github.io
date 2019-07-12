@@ -13,7 +13,9 @@
     "build": "parcel build src/index.pug --public-url ./ --out-dir docs",
     "clean": "rm -r dist; rm -r .cache; rm -r node_modules; npm cache verify"
   },
-  "dependencies": {},
+  "dependencies": {
+    "swing": "^3.1.4"
+  },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
