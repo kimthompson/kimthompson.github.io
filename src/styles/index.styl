@@ -1,4 +1,4 @@
-@require './vars'
+@require './_vars'
 
 html
   font-size: 62.5% /* Now 10px = 1rem! */
@@ -8,7 +8,7 @@ html
   padding: 0
 
 body
-  background-color: pastelGray
+  background-color: pastel_gray
   margin: 0
   padding: 0
 
@@ -56,11 +56,13 @@ input[type='reset']
   cursor: pointer
   outline: inherit
 
-@require './background'
+@require './_background'
 
 .body
   overflow: auto
 
-@require './header'
-@require './about'
-@require './livejournal'
+@require './_header'
+@require './_about'
+@require './_livejournal'
+@require './_skills'
+@require './_footer'

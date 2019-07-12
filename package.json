@@ -10,7 +10,6 @@
   },
   "scripts": {
     "start": "parcel src/index.pug",
-    "dev": "parcel watch src/index.pug",
     "build": "parcel build src/index.pug --public-url ./ --out-dir docs",
     "clean": "rm -r dist; rm -r .cache; rm -r node_modules; npm cache verify"
   },
