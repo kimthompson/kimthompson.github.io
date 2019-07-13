@@ -67,7 +67,7 @@ const skills = [
     level: 6,
     icon: "fas fa-chart-area",
     story:
-      "I've done a few things with D3, most notably, MPR's 2018 election coverage and a visualization of Kepler objects for a graduate level course. Nowadays I find it most efficient to blend D3's math capabilities with React and svg manipulation.",
+      "I've done a few things with D3, most recently MPR News's new weather dashboard. Nowadays I find it most efficient to blend D3's math capabilities with React and svg manipulation.",
     color: "#e500e5",
     index: 7
   },
