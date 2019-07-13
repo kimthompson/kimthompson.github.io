@@ -11,6 +11,7 @@
   "scripts": {
     "start": "parcel src/index.pug",
     "build": "parcel build src/index.pug --public-url ./ --out-dir docs",
+    "publish": "git subtree push --prefix docs origin master",
     "clean": "rm -r dist; rm -r .cache; rm -r node_modules; npm cache verify"
   },
   "dependencies": {
@@ -18,10 +19,6 @@
     "swing": "^3.1.4"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "@fortawesome/fontawesome-free-regular": "^5.0.13",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "parcel": "^1.12.3",
     "pug": "^2.0.4",
     "stylus": "^0.54.5"
