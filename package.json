@@ -11,8 +11,9 @@
   "scripts": {
     "start": "parcel src/index.pug",
     "build": "parcel build src/index.pug --public-url ./ --out-dir docs",
+    "pre-publish": "cp CNAME docs/CNAME",
     "publish": "git subtree push --prefix docs origin master",
-    "clean": "rm -r dist; rm -r .cache; rm -r node_modules; npm cache verify"
+    "clean": "rm -r dist; rm -r .cache; rm -r docs; rm -r node_modules; npm cache verify"
   },
   "dependencies": {
     "date-fns": "^1.30.1",
