@@ -3,9 +3,10 @@ footer
   display: flex
   flex-direction: column
   align-items: center
-
   .fab
     font-size: 4rem
+    @media screen and (max-width: 500px)
+      font-size: 2.5rem
 
 .btn_resume
   font-size: 3em
@@ -39,6 +40,20 @@ footer
     padding: 5px 3px
   i.fa-medium-m, i.fa-codepen
     padding: 5px
+  @media screen and (max-width: 500px)
+    width: 30px
+    height: 30px
+    padding: 5px
+    margin: 5px
+    border-radius: 2px
+    border: 2px solid gunmetal
+    i 
+      padding: 3px
+    i.fa-youtube
+      padding: 3px 2px
+    i.fa-medium-m, i.fa-codepen
+      padding: 3px
+    
 
 .icon_button:hover
   background-color: maroon_flush
