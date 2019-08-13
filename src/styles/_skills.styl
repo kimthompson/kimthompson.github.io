@@ -28,6 +28,7 @@
   grid-template-columns: auto
   grid-template-rows: 50px auto 50px
   position: absolute
+  z-index: skill_card_z_index
   background-color: pastel_gray 
   color: gunmetal
   width: 275px
@@ -49,12 +50,12 @@
 .skills_card-icon
   grid-row: 2
   grid-column: 1
+  z-index: skill_icon_z_index
 
 .skills_card-desc
   grid-row: 2
   grid-column: 1
-
-.skills_card-desc
+  z-index: skill_description_z_index
   font-size: 0.9em
   font-weight: 500
   font-family: font_sans
