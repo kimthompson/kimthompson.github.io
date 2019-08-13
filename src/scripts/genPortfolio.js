@@ -6,8 +6,19 @@ import election2018Image from "../../images/portfolio/election-2018_694x694.jpg"
 import liveFromHereImage from "../../images/portfolio/live-from-here-2018_675x675.jpg";
 import npmTitanImage from "../../images/portfolio/npm-apmg-titan-2019_675x675.jpg";
 import podcastEngineImage from "../../images/portfolio/podcast-engine-2019_600x600.jpg";
+import mprNewsImage from "../../images/portfolio/mpr-news-2019_848x848.jpg";
 
 const portfolio = [
+  {
+    title: "MPR News",
+    category: "project",
+    short_description: "We moved MPR News to our new CMS and React, giving it a mild facelift along the way",
+    long_description: "We built it in 6 weeks, which really wasn't enough time. We're still patching it.",
+    date: new Date("July 30, 2019"),
+    thumbnail: mprNewsImage,
+    link: "http://www.mprnews.org",
+    order: 0
+  },
   {
     title: "CONvergence 2019",
     category: "event",
@@ -17,7 +28,7 @@ const portfolio = [
     date: new Date("July 4, 2019"),
     thumbnail: "",
     link: "http://www.convergence-con.org/",
-    order: 0
+    order: 1
   },
   {
     title: "APM Podcast Site Engine",
@@ -29,7 +40,7 @@ const portfolio = [
     date: new Date("May 2019"),
     thumbnail: podcastEngineImage,
     link: "https://www.decomposedshow.org/",
-    order: 1
+    order: 2
   },
   {
     title: "Railsconf 2019",
@@ -40,7 +51,7 @@ const portfolio = [
     date: new Date("April 30, 2019"),
     thumbnail: "",
     link: "https://railsconf.com/",
-    order: 2
+    order: 3
   },
   {
     title: "Minnebar 2019",
@@ -63,7 +74,7 @@ const portfolio = [
     date: new Date("March 2019"),
     thumbnail: npmTitanImage,
     link: "https://www.npmjs.com/package/@apmg/titan",
-    order: 3
+    order: 5
   },
   {
     title: "Generating a GitHub Pages Site with Nuxt.js",
@@ -75,7 +86,7 @@ const portfolio = [
     thumbnail: nuxtArticleImage,
     link:
       "https://medium.com/kim-thompson/github-pages-and-nuxt-js-d4ea9ad1f80c",
-    order: 5
+    order: 6
   },
   {
     title: "MPR 2018 Election Coverage",
@@ -86,7 +97,7 @@ const portfolio = [
     date: new Date("November 2018"),
     thumbnail: election2018Image,
     link: "https://elections.mpr.org/2018-11-06",
-    order: 6
+    order: 7
   },
   {
     title: "Live From Here",
@@ -97,7 +108,7 @@ const portfolio = [
     date: new Date("October 2018"),
     thumbnail: liveFromHereImage,
     link: "https://www.livefromhere.org/",
-    order: 7
+    order: 8
   },
   {
     title: "Classical 24",
@@ -108,7 +119,7 @@ const portfolio = [
     date: new Date("September 2018"),
     thumbnail: classical24Image,
     link: "https://www.classical24.org/",
-    order: 8
+    order: 9
   }
 ];
 
