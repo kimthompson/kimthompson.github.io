@@ -1,80 +1,56 @@
 <script>
-  export let name;
-  name = "Kim Thompson";
+  import Header from './Header.svelte'
+  import About from './About.svelte'
+  import Footer from './Footer.svelte'
 </script>
 
 <style>
   :global(:root){
-    --header-color: maroon 
-  }  
+    /* FONTS */
+    --font_sans: 'Fira Sans', Helvetica, sans-serif;
+    --font_mono: 'Fira Mono', 'Lucida Console', monospace;
 
-  h1 {
-    color: black;
-  }
+    /* COLORS */
+    --maya_blue: hsl(201, 93%, 71%); /* accent from icon */
+    --razzmatazz: hsl(336, 85%, 53%); /* accent from icon */
+    --gunmetal: hsl(233, 22%, 23%);
+    --maroon_flush: hsl(340, 72%, 39%);
+    --v_black: hsl(0, 0%, 5%);
+    --eerie_black: hsl(20, 6%, 9%);
+    --dark_puce: hsl(327, 7%, 25%);
+    --puce: hsl(330, 11%, 78%);
+    --pastel_gray: hsl(330, 11%, 78%);
+    --v_white: hsl(0, 0%, 95%);
+    
+    /* BREAKPOINTS */
+    --mega: 90em;
+    --desktop: 70em;
+    --laptop: 64em;
+    --tablet: 50em;
+    --phablet: 37.5em;
+    --phone: 28em;
+
+    /* MATERIAL DESIGN BOX SHADOW */
+    --box_shadow_1: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);
+    --box_shadow_2: 0 3px 6px hsla(0, 0%, 0%, 0.16), 0 3px 6px hsla(0, 0%, 0%, 0.23);
+    --box_shadow_3: 0 10px 20px hsla(0, 0%, 0%, 0.19), 0 6px 6px hsla(0, 0%, 0%, 0.23);
+    --box_shadow_4: 0 14px 28px hsla(0, 0%, 0%, 0.25), 0 10px 10px hsla(0, 0%, 0%, 0.22);
+    --box_shadow_5: 0 19px 38px hsla(0, 0%, 0%, 0.3), 0 15px 12px hsla(0, 0%, 0%, 0.22);
+
+    /* Z-INDEX */
+    --background_z_index: -1000;
+    --headshot_z_index: -900;
+    --livejournal_z_index: -800;
+
+    --portfolio_z_index: 100;
+    --portfolio_image_z_index: 101;
+
+    --card_z_index: 200;
+    --card_icon_z_index: 201;
+    --card_icon_z_desc: 202;
+  }  
 </style>
 
-<header class="header">
-  <a href="/">
-    <h1 class="header_title">{name}</h1>
-  </a>
-  <button class="menuButton" id="menuToggle" aria-label="menu button">
-    <i class="fa fa-caret-down"/>
-  </button>
-  <div class="menu">
-    <nav>
-      <ul id="menu" class="navlinks hide">
-        <li class="navlinks_link">
-          <a href="#about" aria-label="about me">
-            <i class="fa fa-info" />
-            <span>About</span>
-          </a>
-        </li>
-        <li class="navlinks_link">
-          <a href="#skills" aria-label="skills">
-            <i class="fa fa-code" />
-            <span>Skills</span>
-          </a>
-        </li>
-        <li class="navlinks_link">
-          <a href="https://medium.com/kim-thompson" aria-label="my medium blog">
-            <i class="fab fa-medium-m" />
-            <span>Blog</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- TODO: Other components of the site inserted here -->
-
-<footer>
-  <div class="icon_buttons">
-    <div class="icon_button">
-      <a href="https://github.com/kimthompson" aria-label="GitHub">
-        <i class="fab fa-github-alt">
-      </a>
-    </div>
-    <div class="icon_button">
-      <a href="https://medium.com/kim-thompson" aria-label="Medium blog">
-        <i class="fab fa-medium-m">
-      </a>
-    </div>
-    <div class="icon_button">
-      <a href="https://codepen.io/KimicalBurn/#" aria-label="Codepen">
-        <i class="fab fa-codepen">
-      </a>
-    </div>
-    <div class="icon_button">
-      <a href="https://twitter.com/byKimThompson" aria-label="The hellscape known as Twitter">
-        <i class="fab fa-twitter">
-      </a>
-    </div>
-    <div class="icon_button">
-      <a href="https://youtube.com/KimicalBurn" aria-label="YouTube">
-        <i class="fab fa-youtube">
-      </a>
-    </div>
-  </div>
-  <a href="../Feb2019.pdf" class="btn-resume">Resume</a>
-</footer>
+<Header />
+<About />
+<Footer />
