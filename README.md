@@ -1,11 +1,69 @@
-# My Website
+*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
-I originally generated this with Nuxt as an experiment, but that seemed like overkill for this site. Then I attended [Lemon](https://ahoylemon.xyz/)'s Minnebar 2019 presentation on shrinking your website and Ross Kaffenberger's RailsConf 2019 presentation on PWAs and decided to make this splash page as tiny as possible.
+---
 
-This is a WIP: the design and architecture are done, but now I want to really understand PWAs and optimization on a basic level and get Lighthouse passing at > 90%.
+# svelte app
 
-The avatar was done by [Lady Red](https://www.instagram.com/lady_red_art/?hl=en). Her stuff is awesome, and you should check her out!
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
-GIFs cropped with [EZGif](https://ezgif.com/crop).
+To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
-Color scheme, as always, putzed around with with Coolors.com.
+```bash
+npx degit sveltejs/template svelte-app
+cd svelte-app
+```
+
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
+
+## Get started
+
+Install the dependencies...
+
+```bash
+cd svelte-app
+npm install
+```
+
+...then start [Rollup](https://rollupjs.org):
+
+```bash
+npm run dev
+```
+
+Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+
+## Deploying to the web
+
+### With [now](https://zeit.co/now)
+
+Install `now` if you haven't already:
+
+```bash
+npm install -g now
+```
+
+Then, from within your project folder:
+
+```bash
+cd public
+now
+```
+
+As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
+
+### With [surge](https://surge.sh/)
+
+Install `surge` if you haven't already:
+
+```bash
+npm install -g surge
+```
+
+Then, from within your project folder:
+
+```bash
+npm run build
+surge public
+```
