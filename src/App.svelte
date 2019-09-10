@@ -14,14 +14,22 @@
 
     /* COLORS */
     --maya_blue: hsl(201, 93%, 71%); /* accent from icon */
+    --maya_blue_fade: hsla(201, 93%, 71%, 0.75);
     --razzmatazz: hsl(336, 85%, 53%); /* accent from icon */
+    --razzmatazz_fade: hsla(336, 85%, 53%, 0.75);
     --gunmetal: hsl(233, 22%, 23%);
+    --gunmetal_fade: hsla(233, 22%, 23%, 0.75);
     --maroon_flush: hsl(340, 72%, 39%);
+    --maroon_flush_fade: hsla(340, 72%, 39%, 0.75);
     --v_black: hsl(0, 0%, 5%);
     --eerie_black: hsl(20, 6%, 9%);
+    --eerie_black_fade: hsla(20, 6%, 9%, 0.75);
     --dark_puce: hsl(327, 7%, 25%);
+    --dark_puce_fade: hsla(327, 7%, 25%, 0.75);
     --puce: hsl(330, 11%, 78%);
+    --puce_fade: hsla(330, 11%, 78%, 0.75);
     --pastel_gray: hsl(330, 11%, 78%);
+    --pastel_gray_fade: hsla(330, 11%, 78%, 0.75);
     --v_white: hsl(0, 0%, 95%);
     
     /* BREAKPOINTS */
