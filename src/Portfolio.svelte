@@ -84,7 +84,6 @@
 </style>
 
 <script>
-  import { format } from 'date-fns';
   import { portfolio } from './data/portfolio.js';
 
   portfolio.sort((a, b) => a.order - b.order);
@@ -99,7 +98,7 @@
       {/if}
       <div class="overlay">
         <h3>{tile.title}</h3>
-        <h4>{tile.category === "project" ? format(tile.date, "MMMM D, YYYY") : format(tile.date, "MMMM YYYY")}</h4>
+        <h4>{tile.date}<h4>
         {#if tile.category === "event"}
           <p>{tile.long_description}</p>
         {/if}
