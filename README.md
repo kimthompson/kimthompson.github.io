@@ -1,6 +1,6 @@
 # kimthompson.me (or kimthompson.github.io) 
 
-This is my personal website, built with Svelte. Hopefully I'm done rebuilding it forever now, and will move on to other projects and minor enhancements as I learn more about PWAs and animations.
+This is my personal website, built with [Svelte](https://svelte.dev/). Hopefully I'm done rebuilding it forever now, and will move on to other projects and minor enhancements as I learn more about PWAs and animations.
 
 Originally I built it with [Nuxt.js](https://nuxtjs.org) because I wanted to use Vue and heard it was good for building static sites. It was a good exercise, especially considering we ended up using [Next.js](https://nextjs.org) at my job at MPR, but it was way overpowered and large for what I needed.
 
@@ -18,6 +18,6 @@ Download this repository, install the dependencies with `npm i`, then run the `n
 
 If you want to use this as a template for your own site (the styles need to be combed through for redundancies, so I'm not sure I would!), feel free to fork it into a repo named [YOUR_GITHUB_USERNAME].github.io, make the changes you need, then deploy as follows:
 
-Enter the command `npm run build`, then run `npm run checkbuild` to boot up this public folder on [localhost:8080](http://localhost:8080) to confirm that your build worked as expected.
+Enter the command `npm run build` to create your bundles in the **/public** folder. To see if your site is building as expected, run `npm run checkbuild` and visit on [localhost:8080](http://localhost:8080).
 
-Then, push up your changes to the dev branch and enter `npm run publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io.  
+If you're satisfied with that, push up your changes to the **dev** branch and enter `npm run publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io. This command simply publishes the public folder on its own as a subtree to the **master** branch, which is what becomes the website.
