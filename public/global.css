@@ -42,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-p, ul, li, ol {
+p, ul, li, ol, tr, td {
   font-family: var(--font_sans);
   color: var(--v_black);
 }
