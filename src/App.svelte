@@ -1,6 +1,8 @@
 <script>
   import Header from './Header.svelte'
   import About from './About.svelte'
+  import Skills from './Skills.svelte'
+  import Portfolio from './Portfolio.svelte'
   import Footer from './Footer.svelte'
 </script>
 
@@ -74,5 +76,7 @@
 <div class="body">
   <Header />
   <About />
+  <Skills />
+  <Portfolio />
   <Footer />
 </div>
