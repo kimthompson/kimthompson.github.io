@@ -1,69 +1,23 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# kimthompson.me (or kimthompson.github.io) 
 
----
+This is my personal website, built with Svelte. Hopefully I'm done rebuilding it forever now, and will move on to other projects and minor enhancements as I learn more about PWAs and animations.
 
-# svelte app
+Originally I built it with [Nuxt.js](https://nuxtjs.org) because I wanted to use Vue and heard it was good for building static sites. It was a good exercise, especially considering we ended up using [Next.js](https://nextjs.org) at my job at MPR, but it was way overpowered and large for what I needed.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+Then I went to [Lemon's](https://ahoylemon.xyz) 2019 Minnebar talk on making the web tiny, and was inspired to remake my website using plain old HTML, CSS and JavaScript. I succeeded in this, and it was great review, but I definitely missed the effortless templating of React.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+Then I watched [this talk](https://www.youtube.com/watch?v=AdNJ3fydeao) by Rich Harris, the creator of Svelte, and knew I wanted to at least try to port my site to it. Fortunately, the vanilla-to-Svelte transition took no time at all, and resulted in far less code. Everything just worked as it was supposed to. For this and the performance reasons he outlined in the talk above, I think I may be hooked!
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+## Running this site locally
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+The following instructions assume that you have a basic knowledge of npm and bash terminals.
 
+Download this repository, install the dependencies with `npm i`, then run the `npm run dev` command. Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-## Get started
+## Deploying to the web with GitHub Pages
 
-Install the dependencies...
+If you want to use this as a template for your own site (the styles need to be combed through for redundancies, so I'm not sure I would!), feel free to fork it into a repo named [YOUR_GITHUB_USERNAME].github.io, make the changes you need, then deploy as follows:
 
-```bash
-cd svelte-app
-npm install
-```
+Enter the command `npm run build`, then run `npm run checkbuild` to boot up this public folder on [localhost:8080](http://localhost:8080) to confirm that your build worked as expected.
 
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+Then, push up your changes to the dev branch and enter `npm run publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io.  
