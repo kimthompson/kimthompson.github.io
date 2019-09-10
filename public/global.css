@@ -37,8 +37,14 @@ h6 {
 }
 
 a {
+  font-family: var(--font_sans);
   color: var(--gunmetal);
   text-decoration: none;
+}
+
+p, ul, li, ol {
+  font-family: var(--font_sans);
+  color: var(--v_black);
 }
 
 label {

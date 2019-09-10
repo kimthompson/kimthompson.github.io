@@ -19,10 +19,14 @@
   .menu {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .menuButton {
     margin: 0;
+    background-color: transparent;
+    border: 0;
   }
 
   .menuButton .fa {
@@ -34,14 +38,10 @@
     color: var(--maroon_flush);
   }
 
-  @media screen and (min-width: 900px) {
-    .header_title {
-      font-size: 7rem;
-    }
-  }
-
   .navlinks {
     margin: 0 15px 0 30px;
+    list-style-type: none;
+    margin-right: -5px;
   }
 
   .navlinks_link {
@@ -49,20 +49,25 @@
   }
 
   .navlinks_link a {
-    color: pastel_gray;
+    color: var(--pastel_gray);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .navlinks_link a:hover {
-    color: v_white;
+    color: var(--v_white);
     transition: all 200ms linear;
   }
 
   .navlinks_link a i {
     width: 50px;
     font-size: 2rem;
+    text-align: center;
   }
 
-  .navlinks_link a span {
+  .navlinks_link a div {
     font-size: 2rem;
   }
 
@@ -101,37 +106,55 @@
   .navlinks.show li:nth-child(3) {
     transition-delay: 200ms;
   }
+
+  @media screen and (min-width: 900px) {
+    .header_title {
+      font-size: 7rem;
+    }
+  }
 </style>
+
+<script>
+  import { fade } from 'svelte/transition';
+
+  let isHidden = true;
+
+  function toggleMenu() {
+    isHidden = !isHidden;
+  }
+</script>
 
 <header class="header">
   <a href="/">
     <h1 class="header_title">Kim Thompson<h1>
   </a>
-  <button class="menuButton" id="menuToggle" aria-label="menu button">
-    <i class="fa fa-caret-down"/>
-  </button>
   <div class="menu">
-    <nav>
-      <ul id="menu" class="navlinks hide">
-        <li class="navlinks_link">
-          <a href="#about" aria-label="about me">
-            <i class="fa fa-info" />
-            <span>About</span>
-          </a>
-        </li>
-        <li class="navlinks_link">
-          <a href="#skills" aria-label="skills">
-            <i class="fa fa-code" />
-            <span>Skills</span>
-          </a>
-        </li>
-        <li class="navlinks_link">
-          <a href="https://medium.com/kim-thompson" aria-label="my medium blog">
-            <i class="fab fa-medium-m" />
-            <span>Blog</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <button class="menuButton" aria-label="menu button" on:click={toggleMenu}>
+      <i class="fa fa-caret-down"/>
+    </button>
+    <div>
+      <nav>
+        <ul id="menu" class="navlinks {isHidden ? 'hide' : 'show'}">
+          <li class="navlinks_link">
+            <a href="#about" aria-label="about me">
+              <div>About</div>
+              <i class="fa fa-info" />
+            </a>
+          </li>
+          <li class="navlinks_link">
+            <a href="#skills" aria-label="skills">
+              <div>Skills</div>
+              <i class="fa fa-code" />
+            </a>
+          </li>
+          <li class="navlinks_link">
+            <a href="https://medium.com/kim-thompson" aria-label="my Medium blog">
+              <div>Blog</div>
+              <i class="fab fa-medium-m" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

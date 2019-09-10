@@ -49,8 +49,30 @@
     --card_icon_z_index: 201;
     --card_icon_z_desc: 202;
   }  
+
+  .body {
+    overflow: auto;
+  }
+
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: var(--background_z_index);
+  }
+
+  .background_tri-top {
+    fill: var(--gunmetal);
+    stroke: 0;
+  }
 </style>
 
-<Header />
-<About />
-<Footer />
+<svg class="background" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <polygon class="background_tri-top" stroke="0" points="0 0 1000 0 1000 400 500 650 0 400" />
+</svg>
+
+<div class="body">
+  <Header />
+  <About />
+  <Footer />
+</div>
