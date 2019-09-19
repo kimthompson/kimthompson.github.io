@@ -7,7 +7,7 @@ export const portfolio = [
 		date: "July 2019",
 		thumbnail: "images/portfolio/mpr-news-2019_848x848.jpg",
     link: "http://www.mprnews.org",
-    order: 0
+    order: 10
   },
   {
     title: "CONvergence 2019",
@@ -18,7 +18,7 @@ export const portfolio = [
     date: "July 4, 2019",
     thumbnail: "",
     link: "http://www.convergence-con.org/",
-    order: 1
+    order: 9
   },
   {
     title: "APM Podcast Site Engine",
@@ -30,7 +30,7 @@ export const portfolio = [
     date: "May 2019",
     thumbnail: "images/portfolio/podcast-engine-2019_600x600.jpg",
     link: "https://www.decomposedshow.org/",
-    order: 2
+    order: 8
   },
   {
     title: "Railsconf 2019",
@@ -41,7 +41,7 @@ export const portfolio = [
     date: "April 30, 2019",
     thumbnail: "",
     link: "https://railsconf.com/",
-    order: 3
+    order: 7
   },
   {
     title: "Minnebar 2019",
@@ -52,7 +52,7 @@ export const portfolio = [
     date: "April 27, 2019",
     thumbnail: "",
     link: "https://minnestar.org/minnebar/",
-    order: 4
+    order: 6
   },
   {
     title: "APMG's NPM Libraries",
@@ -76,7 +76,7 @@ export const portfolio = [
     thumbnail: "images/portfolio/boom.gif",
     link:
       "https://medium.com/kim-thompson/github-pages-and-nuxt-js-d4ea9ad1f80c",
-    order: 6
+    order: 4
   },
   {
     title: "MPR 2018 Election Coverage",
@@ -87,7 +87,7 @@ export const portfolio = [
     date: "November 2018",
     thumbnail: "images/portfolio/election-2018_694x694.jpg",
     link: "https://elections.mpr.org/2018-11-06",
-    order: 7
+    order: 3
   },
   {
     title: "Live From Here",
@@ -98,7 +98,7 @@ export const portfolio = [
     date: "October 2018",
     thumbnail: "images/portfolio/live-from-here-2018_675x675.jpg",
     link: "https://www.livefromhere.org/",
-    order: 8
+    order: 2
   },
   {
     title: "Classical 24",
@@ -109,7 +109,7 @@ export const portfolio = [
     date: "September 2018",
     thumbnail: "images/portfolio/classical-24-2018_520x520.jpg",
     link: "https://www.classical24.org/",
-    order: 9
+    order: 1
   }
 ];
 
