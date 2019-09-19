@@ -23020,7 +23020,7 @@ var app = (function () {
     		date: "July 2019",
     		thumbnail: "images/portfolio/mpr-news-2019_848x848.jpg",
         link: "http://www.mprnews.org",
-        order: 0
+        order: 10
       },
       {
         title: "CONvergence 2019",
@@ -23031,7 +23031,7 @@ var app = (function () {
         date: "July 4, 2019",
         thumbnail: "",
         link: "http://www.convergence-con.org/",
-        order: 1
+        order: 9
       },
       {
         title: "APM Podcast Site Engine",
@@ -23043,7 +23043,7 @@ var app = (function () {
         date: "May 2019",
         thumbnail: "images/portfolio/podcast-engine-2019_600x600.jpg",
         link: "https://www.decomposedshow.org/",
-        order: 2
+        order: 8
       },
       {
         title: "Railsconf 2019",
@@ -23054,7 +23054,7 @@ var app = (function () {
         date: "April 30, 2019",
         thumbnail: "",
         link: "https://railsconf.com/",
-        order: 3
+        order: 7
       },
       {
         title: "Minnebar 2019",
@@ -23065,7 +23065,7 @@ var app = (function () {
         date: "April 27, 2019",
         thumbnail: "",
         link: "https://minnestar.org/minnebar/",
-        order: 4
+        order: 6
       },
       {
         title: "APMG's NPM Libraries",
@@ -23089,7 +23089,7 @@ var app = (function () {
         thumbnail: "images/portfolio/boom.gif",
         link:
           "https://medium.com/kim-thompson/github-pages-and-nuxt-js-d4ea9ad1f80c",
-        order: 6
+        order: 4
       },
       {
         title: "MPR 2018 Election Coverage",
@@ -23100,7 +23100,7 @@ var app = (function () {
         date: "November 2018",
         thumbnail: "images/portfolio/election-2018_694x694.jpg",
         link: "https://elections.mpr.org/2018-11-06",
-        order: 7
+        order: 3
       },
       {
         title: "Live From Here",
@@ -23111,7 +23111,7 @@ var app = (function () {
         date: "October 2018",
         thumbnail: "images/portfolio/live-from-here-2018_675x675.jpg",
         link: "https://www.livefromhere.org/",
-        order: 8
+        order: 2
       },
       {
         title: "Classical 24",
@@ -23122,7 +23122,7 @@ var app = (function () {
         date: "September 2018",
         thumbnail: "images/portfolio/classical-24-2018_520x520.jpg",
         link: "https://www.classical24.org/",
-        order: 9
+        order: 1
       }
     ];
 
@@ -23136,17 +23136,17 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (96:6) {#if tile.thumbnail !== ""}
-    function create_if_block_1(ctx) {
+    // (99:8) {:else}
+    function create_else_block(ctx) {
     	var img;
 
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "image svelte-gzoip1");
-    			attr_dev(img, "src", ctx.tile.thumbnail);
-    			attr_dev(img, "alt", ctx.tile.short_description);
-    			add_location(img, file$3, 96, 8, 1886);
+    			attr_dev(img, "class", "transparent svelte-11wftgb");
+    			attr_dev(img, "src", "/images/kim_icon_250x250.png");
+    			attr_dev(img, "alt", "nothing to see here");
+    			add_location(img, file$3, 99, 10, 1888);
     		},
 
     		m: function mount(target, anchor) {
@@ -23161,11 +23161,40 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(96:6) {#if tile.thumbnail !== \"\"}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block.name, type: "else", source: "(99:8) {:else}", ctx });
     	return block;
     }
 
-    // (102:8) {#if tile.category === "event"}
+    // (97:8) {#if tile.thumbnail !== ''}
+    function create_if_block_1(ctx) {
+    	var img;
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			attr_dev(img, "src", ctx.tile.thumbnail);
+    			attr_dev(img, "alt", ctx.tile.short_description);
+    			attr_dev(img, "class", "svelte-11wftgb");
+    			add_location(img, file$3, 97, 10, 1804);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(img);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(97:8) {#if tile.thumbnail !== ''}", ctx });
+    	return block;
+    }
+
+    // (110:14) {#if tile.category === 'event'}
     function create_if_block(ctx) {
     	var p, t_value = ctx.tile.long_description + "", t;
 
@@ -23173,8 +23202,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-gzoip1");
-    			add_location(p, file$3, 102, 10, 2106);
+    			attr_dev(p, "class", "svelte-11wftgb");
+    			add_location(p, file$3, 110, 16, 2209);
     		},
 
     		m: function mount(target, anchor) {
@@ -23190,23 +23219,29 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block.name, type: "if", source: "(102:8) {#if tile.category === \"event\"}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block.name, type: "if", source: "(110:14) {#if tile.category === 'event'}", ctx });
     	return block;
     }
 
-    // (93:2) {#each portfolio as tile}
+    // (94:2) {#each portfolio as tile}
     function create_each_block$2(ctx) {
-    	var div1, a, t0, div0, h3, t1_value = ctx.tile.title + "", t1, t2, h41, t3_value = ctx.tile.date + "", t3, h40, t4;
+    	var div2, a, t0, div0, h3, t1_value = ctx.tile.title + "", t1, t2, h41, t3_value = ctx.tile.date + "", t3, t4, h40, t5, div1, t6;
 
-    	var if_block0 = (ctx.tile.thumbnail !== "") && create_if_block_1(ctx);
+    	function select_block_type(changed, ctx) {
+    		if (ctx.tile.thumbnail !== '') return create_if_block_1;
+    		return create_else_block;
+    	}
 
-    	var if_block1 = (ctx.tile.category === "event") && create_if_block(ctx);
+    	var current_block_type = select_block_type(null, ctx);
+    	var if_block0 = current_block_type(ctx);
+
+    	var if_block1 = (ctx.tile.category === 'event') && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div2 = element("div");
     			a = element("a");
-    			if (if_block0) if_block0.c();
+    			if_block0.c();
     			t0 = space();
     			div0 = element("div");
     			h3 = element("h3");
@@ -23214,28 +23249,33 @@ var app = (function () {
     			t2 = space();
     			h41 = element("h4");
     			t3 = text(t3_value);
+    			t4 = space();
     			h40 = element("h4");
     			if (if_block1) if_block1.c();
-    			t4 = space();
-    			attr_dev(h3, "class", "svelte-gzoip1");
-    			add_location(h3, file$3, 99, 8, 2006);
-    			attr_dev(h40, "class", "svelte-gzoip1");
-    			add_location(h40, file$3, 100, 23, 2051);
-    			attr_dev(h41, "class", "svelte-gzoip1");
-    			add_location(h41, file$3, 100, 8, 2036);
-    			attr_dev(div0, "class", "overlay svelte-gzoip1");
-    			add_location(div0, file$3, 98, 6, 1976);
-    			attr_dev(a, "class", "" + (`item-inner item-${ctx.tile.category}`) + " svelte-gzoip1");
+    			t5 = space();
+    			div1 = element("div");
+    			t6 = space();
+    			attr_dev(h3, "class", "svelte-11wftgb");
+    			add_location(h3, file$3, 105, 10, 2069);
+    			attr_dev(h40, "class", "svelte-11wftgb");
+    			add_location(h40, file$3, 108, 12, 2142);
+    			attr_dev(h41, "class", "svelte-11wftgb");
+    			add_location(h41, file$3, 106, 10, 2101);
+    			attr_dev(div0, "class", "item_text svelte-11wftgb");
+    			add_location(div0, file$3, 104, 8, 2035);
+    			attr_dev(div1, "class", "overlay overlay-" + ctx.tile.category + " svelte-11wftgb");
+    			add_location(div1, file$3, 115, 8, 2317);
+    			attr_dev(a, "class", "item-inner svelte-11wftgb");
     			attr_dev(a, "href", ctx.tile.link);
-    			add_location(a, file$3, 94, 4, 1780);
-    			attr_dev(div1, "class", "item svelte-gzoip1");
-    			add_location(div1, file$3, 93, 2, 1757);
+    			add_location(a, file$3, 95, 6, 1718);
+    			attr_dev(div2, "class", "item");
+    			add_location(div2, file$3, 94, 4, 1693);
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, a);
-    			if (if_block0) if_block0.m(a, null);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, a);
+    			if_block0.m(a, null);
     			append_dev(a, t0);
     			append_dev(a, div0);
     			append_dev(div0, h3);
@@ -23243,27 +23283,30 @@ var app = (function () {
     			append_dev(div0, t2);
     			append_dev(div0, h41);
     			append_dev(h41, t3);
+    			append_dev(h41, t4);
     			append_dev(h41, h40);
     			if (if_block1) if_block1.m(h40, null);
-    			append_dev(div1, t4);
+    			append_dev(a, t5);
+    			append_dev(a, div1);
+    			append_dev(div2, t6);
     		},
 
     		p: function update(changed, ctx) {
-    			if (ctx.tile.thumbnail !== "") if_block0.p(changed, ctx);
+    			if_block0.p(changed, ctx);
 
-    			if (ctx.tile.category === "event") if_block1.p(changed, ctx);
+    			if (ctx.tile.category === 'event') if_block1.p(changed, ctx);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(div1);
+    				detach_dev(div2);
     			}
 
-    			if (if_block0) if_block0.d();
+    			if_block0.d();
     			if (if_block1) if_block1.d();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$2.name, type: "each", source: "(93:2) {#each portfolio as tile}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$2.name, type: "each", source: "(94:2) {#each portfolio as tile}", ctx });
     	return block;
     }
 
@@ -23285,8 +23328,8 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr_dev(section, "class", "portfolio svelte-gzoip1");
-    			add_location(section, file$3, 91, 0, 1699);
+    			attr_dev(section, "class", "portfolio svelte-11wftgb");
+    			add_location(section, file$3, 92, 0, 1633);
     		},
 
     		l: function claim(nodes) {
@@ -23341,7 +23384,7 @@ var app = (function () {
     }
 
     function instance$2($$self) {
-    	portfolio.sort((a, b) => a.order - b.order);
+    	portfolio.sort((a, b) => b.order - a.order);
 
     	$$self.$capture_state = () => {
     		return {};
@@ -23521,17 +23564,17 @@ var app = (function () {
     			portfolio.$$.fragment.c();
     			t4 = space();
     			footer.$$.fragment.c();
-    			attr_dev(polygon, "class", "background_tri-top svelte-1vlsaau");
+    			attr_dev(polygon, "class", "background_tri-top svelte-yi7rfr");
     			attr_dev(polygon, "stroke", "0");
     			attr_dev(polygon, "points", "0 0 1000 0 1000 400 500 650 0 400");
-    			add_location(polygon, file$5, 80, 2, 2429);
-    			attr_dev(svg, "class", "background svelte-1vlsaau");
+    			add_location(polygon, file$5, 90, 2, 2504);
+    			attr_dev(svg, "class", "background svelte-yi7rfr");
     			attr_dev(svg, "preserveAspectRatio", "none");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 1000 1000");
-    			add_location(svg, file$5, 79, 0, 2316);
-    			attr_dev(div, "class", "body svelte-1vlsaau");
-    			add_location(div, file$5, 83, 0, 2530);
+    			add_location(svg, file$5, 85, 0, 2383);
+    			attr_dev(div, "class", "body svelte-yi7rfr");
+    			add_location(div, file$5, 96, 0, 2617);
     		},
 
     		l: function claim(nodes) {
