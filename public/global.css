@@ -42,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-p, ul, li, ol, tr, td {
+p, ul, li, ol, tr, td, figcaption, caption {
   font-family: var(--font_sans);
   color: var(--v_black);
 }

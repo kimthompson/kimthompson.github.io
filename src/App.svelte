@@ -28,8 +28,8 @@
     --dark_puce_fade: hsla(327, 7%, 25%, 0.75);
     --puce: hsl(330, 11%, 78%);
     --puce_fade: hsla(330, 11%, 78%, 0.75);
-    --pastel_gray: hsl(330, 11%, 78%);
-    --pastel_gray_fade: hsla(330, 11%, 78%, 0.75);
+    --pastel_gray: hsl(336, 7%, 87%);
+    --pastel_gray_fade: hsla(336, 7%, 87%, 0.75);
     --v_white: hsl(0, 0%, 95%);
     
     /* BREAKPOINTS */
