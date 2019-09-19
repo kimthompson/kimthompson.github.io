@@ -1,3 +1,9 @@
+<script>
+  import { portfolio } from "./data/portfolio.js";
+
+  portfolio.sort((a, b) => b.order - a.order);
+</script>
+
 <style>
   .portfolio {
     display: grid;
@@ -8,23 +14,16 @@
     background-color: var(--puce);
   }
 
-  h1, h2, h3, h4, p, a {
+  h3,
+  h4,
+  p,
+  a {
     color: var(--v_black);
-    text-shadow: var(--gunmetal) 0px 0px 1px
-  }
-
-  .item {
-    display: flex;
+    text-shadow: var(--gunmetal) 0px 0px 1px;
   }
 
   .item-inner {
     display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .item-inner p {
-    margin: 0 3px;
   }
 
   .item-inner img {
@@ -32,77 +31,90 @@
     grid-row: 1;
     width: 100%;
     object-fit: fill;
-    position: relative;
     z-index: var(--portfolio_z_index);
   }
-  
+
   .overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     grid-column: 1;
     grid-row: 1;
     width: 100%;
     height: 100%;
-    z-index: var(--portfolio_image_z_index);
-    color: var(--v_black);
+    justify-self: stretch;
+    align-self: stretch;
+    z-index: var(--portfolio_overlay_z_index);
   }
 
-  .item-event .overlay {
+  .overlay-event {
     background-color: var(--razzmatazz_fade);
   }
 
-  .item-event .overlay:hover {
+  .item-inner:hover .overlay-event {
     background-color: var(--razzmatazz);
   }
 
-  .item-project .overlay {
+  .overlay-project {
     background-color: var(--maya_blue_fade);
   }
 
-  .item-project .overlay:hover {
+  .item-inner:hover .overlay-project {
     background-color: var(--maya_blue);
   }
 
-  .item-article .overlay {
-    background-color: var(--razzmatazz_fade);
+  .overlay-article {
+    background-color: var(--puce_fade);
   }
 
-  .item-article .overlay:hover {
-    background-color: var(--razzmatazz);
+  .item-inner:hover .overlay-article {
+    background-color: var(--puce);
   }
 
-  .item-video .overlay {
+  .overlay-video {
     background-color: var(--maroon_flush_fade);
-    color: var(--v_white);
   }
 
-  .item-video .overlay:hover {
+  .item-inner:hover .overlay-video {
     background-color: var(--maroon_flush);
+  }
+
+  .item_text {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    z-index: var(--portfolio_text_z_index);
+  }
+
+  .transparent {
+    opacity: 0;
   }
 </style>
 
-<script>
-  import { portfolio } from './data/portfolio.js';
-
-  portfolio.sort((a, b) => a.order - b.order);
-</script>
-
 <section class="portfolio">
   {#each portfolio as tile}
-  <div class="item">
-    <a class={`item-inner item-${tile.category}`} href={tile.link}>
-      {#if tile.thumbnail !== ""}
-        <img class="image" src={tile.thumbnail} alt={tile.short_description} />
-      {/if}
-      <div class="overlay">
-        <h3>{tile.title}</h3>
-        <h4>{tile.date}<h4>
-        {#if tile.category === "event"}
-          <p>{tile.long_description}</p>
+    <div class="item">
+      <a class="item-inner" href={tile.link}>
+        {#if tile.thumbnail !== ''}
+          <img src={tile.thumbnail} alt={tile.short_description} />
+        {:else}
+          <img
+            class="transparent"
+            src="/images/kim_icon_250x250.png"
+            alt="nothing to see here" />
         {/if}
-    </a>
-  </div>
+        <div class="item_text">
+          <h3>{tile.title}</h3>
+          <h4>
+            {tile.date}
+            <h4>
+              {#if tile.category === 'event'}
+                <p>{tile.long_description}</p>
+              {/if}
+            </h4>
+          </h4>
+        </div>
+        <div class="overlay overlay-{tile.category}" />
+      </a>
+    </div>
   {/each}
 </section>

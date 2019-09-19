@@ -1,6 +1,6 @@
 {
   "name": "svelte-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
@@ -8,7 +8,7 @@
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
-    "publish": "git subtree push --prefix public origin master",
+    "pub": "git subtree push --prefix public origin master",
     "blast": "rm -rf node_modules/ .cache/ public/bundle.css public/bundle.css.map public/bundle.js public/bundle.js.map package-lock.json"
   },
   "devDependencies": {
