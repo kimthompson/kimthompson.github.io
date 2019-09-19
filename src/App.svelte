@@ -87,7 +87,7 @@
   class="background"
   preserveAspectRatio="none"
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1000 1000">
+  viewBox="0 0 1000 1600">
   <polygon
     class="background_tri-top"
     stroke="0"
