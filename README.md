@@ -10,14 +10,14 @@ Then I watched [this talk](https://www.youtube.com/watch?v=AdNJ3fydeao) by Rich 
 
 ## Running this site locally
 
-The following instructions assume that you have a basic knowledge of npm and bash terminals.
+The following instructions assume that you have a basic knowledge of yarn (or npm) and bash terminals.
 
-Download this repository, install the dependencies with `npm i`, then run the `npm run dev` command. Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Download this repository, install the dependencies with `yarn`, then run the `yarn dev` command. Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
 ## Deploying to the web with GitHub Pages
 
 If you want to use this as a template for your own site (the styles need to be combed through for redundancies, so I'm not sure I would!), feel free to fork it into a repo named [YOUR_GITHUB_USERNAME].github.io, make the changes you need, then deploy as follows:
 
-Enter the command `npm run build` to create your bundles in the **/public** folder. To see if your site is building as expected, run `npm run checkbuild` and visit on [localhost:8080](http://localhost:8080).
+Enter the command `yarn build` to create your bundles in the **/public** folder. To see if your site is building as expected, run `yarn checkbuild` and visit on [localhost:8080](http://localhost:8080).
 
-If you're satisfied with that, push up your changes to the **dev** branch and enter `npm run publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io. This command simply publishes the public folder on its own as a subtree to the **master** branch, which is what becomes the website.
+If you're satisfied with that, push up your changes to the **dev** branch and enter `yarn publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io. This command simply publishes the public folder on its own as a subtree to the **master** branch, which is what becomes the website.
