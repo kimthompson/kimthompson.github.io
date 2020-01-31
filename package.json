@@ -8,7 +8,7 @@
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
-    "pub": "git subtree push --prefix public origin master --force",
+    "pub": "git subtree splut --prefix public -b master; git push -f origin master:master; git branch -D master",
     "blast": "rm -rf node_modules/ .cache/ public/bundle.css public/bundle.css.map public/bundle.js public/bundle.js.map package-lock.json"
   },
   "devDependencies": {
