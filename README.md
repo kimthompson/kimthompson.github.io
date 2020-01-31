@@ -20,4 +20,4 @@ If you want to use this as a template for your own site (the styles need to be c
 
 Enter the command `yarn build` to create your bundles in the **/public** folder. To see if your site is building as expected, run `yarn checkbuild` and visit on [localhost:8080](http://localhost:8080).
 
-If you're satisfied with that, push up your changes to the **dev** branch and enter `yarn publish` to publish your site to [YOUR_GITHUB_USERNAME].github.io. This command simply publishes the public folder on its own as a subtree to the **master** branch, which is what becomes the website.
+If you're satisfied with that, push up your changes to the **dev** branch and enter `yarn pub` to publish your site to [YOUR_GITHUB_USERNAME].github.io. This command simply publishes the public folder on its own as a subtree to the **master** branch, which is what becomes the website.
